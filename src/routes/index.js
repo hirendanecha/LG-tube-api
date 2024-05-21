@@ -16,6 +16,7 @@ const dashboardRouter = require("./dashboard.routes");
 const featuredChannels = require("./featured-channels.routes");
 const messageRouter = require("./message.routes");
 const bugsAndReports = require("./bugs-reports.routes");
+const favoriteProfiles = require("./favorite-profile.routes");
 
 
 router.use("/login", authRoutes);
@@ -33,5 +34,7 @@ router.use("/dashboard", dashboardRouter);
 router.use("/messages", messageRouter);
 router.use("/channels", featuredChannels);
 router.use("/bugs-reports", bugsAndReports);
+router.use("/favorites", favoriteProfiles);
+
 
 module.exports = router;
