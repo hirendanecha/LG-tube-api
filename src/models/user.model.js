@@ -297,7 +297,10 @@ User.adminLogin = function (email, result) {
     p.matchEthnicity,
     p.matchEducation,
     p.matchIsVaccinated,
-    p.matchHaveChild
+    p.matchHaveChild,
+    p.messageNotificationSound,
+    p.callNotificationSound,
+    p.tagNotificationSound
 FROM users as u left join profile as p on p.userId = u.id WHERE u.email = ?`,
     email,
     async function (err, res) {
